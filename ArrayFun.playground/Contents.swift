@@ -35,9 +35,16 @@ let citiesWithTheSameNum = cities.sorted(by: { $0.randomNum < $1.randomNum })
 printCities(cities: citiesWithTheSameNum)
 
 // MARK: - Reduce
+let totalNumber = cities.reduce(0, { x, number in
+    x + number.randomNum
+})
+print("Total Number: \(totalNumber)")
+print("\n")
 
 // MARK: - Map
-
+let cityNames = cities.map({ $0.name })
+print("City names: \(cityNames)")
+print("\n")
 
 // MARK: - Enumeration practice.
 for (index, city) in cities.enumerated() {
