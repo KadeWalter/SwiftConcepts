@@ -17,7 +17,7 @@ class CDSStore: NSObject {
         // Load the persistent stores if they exist.
         // If they don't exist, it will create them.
         // If there is an error along the way, it will return the error.
-        container.loadPersistentStores() { description, error in
+        container.loadPersistentStores() { desc, error in
             if let error = error {
                 print("Error setting up Core Data: \(error)")
             }
